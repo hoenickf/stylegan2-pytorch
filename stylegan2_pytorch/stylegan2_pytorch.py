@@ -885,7 +885,7 @@ class Trainer():
     @torch.no_grad()
     def evaluate(self, num = 0, num_image_tiles = 8, trunc = 1.0):
         self.GAN.eval()
-        ext = 'jpg' if not self.transparent else 'png'
+        ext = 'png'#'jpg' if not self.transparent else 'png'
         num_rows = num_image_tiles
     
         latent_dim = self.GAN.G.latent_dim
